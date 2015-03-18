@@ -23,8 +23,8 @@ circle {
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
-var width = Math.max(96000, innerWidth),
-    height = Math.max(500000, innerHeight);
+var width = Math.max(100, innerWidth),
+    height = Math.max(100, innerHeight);
 
 var i = 0;
 
@@ -47,7 +47,7 @@ function particle() {
       .style("stroke", d3.hsl((i = (i + 1) % 360), 1, .5))
       .style("stroke-opacity", 1)
     .transition()
-      .duration(200000)
+      .duration(200)
       .attr("r", 1000)
 
   d3.event.preventDefault();
