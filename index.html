@@ -47,9 +47,9 @@ function particle() {
       .style("stroke", d3.hsl((i = (i + 1) % 360), 1, .5))
       .style("stroke-opacity", 1)
     .transition()
-      .duration(20000)
+      .duration(200000)
       .ease(Math.sqrt)
-      .attr("r", 100)
+      .attr("r", 1000)
 
   d3.event.preventDefault();
 }
