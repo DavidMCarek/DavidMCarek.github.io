@@ -1,6 +1,29 @@
+element {
+    --content-width: 1000px;
+}
+
 html {
     height: 100%;
 }
 body {
     min-height: 100%;
 }
+
+h4 {
+    margin: 0;
+}
+
+.navbar-fixed nav .nav-wrapper {
+    margin: 0 auto;
+    max-width: var(--content-width);
+}
+
+nav .nav-wrapper .brand-logo {
+    margin: 0 20px;
+}
+
+body > .card-panel {
+    margin: 25px;
+    max-width: var(--content-width);
+}
+
