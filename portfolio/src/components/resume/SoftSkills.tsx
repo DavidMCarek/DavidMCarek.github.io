@@ -1,12 +1,13 @@
 import React from 'react';
+import './Resume.scss'
 
 function SoftSkills() {
     return (
         <section>
             <header>
-                <h2>Soft Skills</h2>
+                <h2 className="resume__section-header">Soft Skills</h2>
             </header>
-            <ul>
+            <ul className="resume__list resume__list--columns">
                 <li>Reframing</li>
                 <li>Design</li>
                 <li>Lateral thinking</li>

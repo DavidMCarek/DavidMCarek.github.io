@@ -1,5 +1,5 @@
 import React from 'react';
-import Resume from './components/resume/Resume'
+import BethsResume from './components/resume/BethsResume'
 import './App.scss';
 
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <main>
-        <Resume />
+        <BethsResume />
       </main>
     </div>
   );
