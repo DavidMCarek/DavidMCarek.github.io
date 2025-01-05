@@ -12,8 +12,8 @@ export default function History() {
           also had a bit of a catch phrase.
         </p>
         <blockquote>
-          JavaScript is like the wild west so it's easy to tell the difference
-          between a good JavaScript developer and a bad one.
+          JavaScript is like the wild west so it{"'"}s easy to tell the
+          difference between a good JavaScript developer and a bad one.
         </blockquote>
         <p>
           This held true in my experiences especially because I was working with
@@ -27,5 +27,5 @@ export default function History() {
         </p>
       </article>
     </main>
-  )
+  );
 }
