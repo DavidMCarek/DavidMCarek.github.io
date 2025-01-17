@@ -9,7 +9,6 @@
     "export": "next export",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "npm run clean && npm run build && cp -a ./out/. ../"
   },
   "dependencies": {
     "next": "15.1.3",
