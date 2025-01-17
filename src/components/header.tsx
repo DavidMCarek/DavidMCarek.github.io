@@ -1,19 +1,14 @@
-import Link from 'next/link';
 import React from 'react';
-import styles from './header.module.scss';
 import { ROUTES } from '@/constants/routes';
+import HeaderNavLink from './headerNavLink';
+import styles from './header.module.scss';
 
 const Header: React.FC = () => {
-  console.log(styles);
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <Link className={styles.navLink} href={ROUTES.HOME}>
-          Home
-        </Link>
-        <Link className={styles.navLink} href={ROUTES.HISTORY}>
-          History
-        </Link>
+        <HeaderNavLink route={ROUTES.HOME}>Home</HeaderNavLink>
+        <HeaderNavLink route={ROUTES.HISTORY}>History</HeaderNavLink>
       </nav>
     </header>
   );
