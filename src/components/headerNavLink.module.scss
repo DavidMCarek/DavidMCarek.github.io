@@ -1,5 +1,9 @@
+@use '../app/mixins';
+
 .navLink {
   padding: 1rem 1.5rem;
+
+  @include mixins.focus-styles;
 }
 
 .active {

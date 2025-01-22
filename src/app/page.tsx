@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import styles from './page.module.scss';
 import Card from '@/components/card';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main>
+    <main className={styles.main}>
       <div className={styles.avatarContainer}>
         <Image
           width={200}
@@ -15,7 +16,28 @@ export default function Home() {
         />
       </div>
       <Card>
-        <h1 className={styles.title}>David Carek</h1>
+        <div className={styles.titlebar}>
+          <h1 className={styles.title}>David Carek</h1>
+          <Link
+            href="https://www.linkedin.com/in/david-carek-8b6b74b0/"
+            className={styles.linkedin}
+          >
+            <Image
+              width={30}
+              height={30}
+              src="/linkedin.svg"
+              alt="David Carek LinkedIn"
+            />
+          </Link>
+          <Link href="https://github.com/davidmcarek" className={styles.github}>
+            <Image
+              width={30}
+              height={30}
+              src="/github.svg"
+              alt="David Carek GitHub"
+            />
+          </Link>
+        </div>
         <p className={styles.summary}>
           Innovative and results-driven software engineer with over a decade of
           experience building scalable, user-centric applications across diverse

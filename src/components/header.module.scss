@@ -1,3 +1,5 @@
+@use '../app/variables' as vars;
+
 .header {
   background-color: #1b4b31;
   color: #ffffff;
@@ -6,4 +8,6 @@
 
 .nav {
   display: flex;
+  max-width: vars.$container-width;
+  margin: 0 auto;
 }
