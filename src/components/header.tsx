@@ -8,6 +8,7 @@ const Header: React.FC = () => {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <HeaderNavLink route={ROUTES.HOME}>Home</HeaderNavLink>
+        <HeaderNavLink route={ROUTES.RESUME}>Resume</HeaderNavLink>
         <HeaderNavLink route={ROUTES.HISTORY}>History</HeaderNavLink>
       </nav>
     </header>

@@ -1,0 +1,23 @@
+@use '../variables' as vars;
+@use '../mixins';
+
+.main {
+  max-width: vars.$container-width;
+  margin: 0 auto;
+}
+
+.name {
+  margin-bottom: 1rem;
+}
+
+.section {
+  margin-top: 1rem;
+}
+
+.skills {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+
+  @include mixins.unstyled-list;
+}

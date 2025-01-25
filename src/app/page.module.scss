@@ -14,8 +14,8 @@
 .avatar {
   border-radius: 100%;
   margin: 0 auto;
-  padding: 2px;
-  background-color: #ffffff;
+  padding: 8px;
+  background-color: #000000;
 }
 
 .titlebar {
@@ -37,4 +37,6 @@
 }
 
 .summary {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
 }

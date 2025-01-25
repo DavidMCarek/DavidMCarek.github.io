@@ -5,6 +5,16 @@ export default function History() {
         <h1>A not so brief history of my software development experience.</h1>
 
         <p>
+          I started learning software development through a partnership program
+          between the Lorain County Community College and the University of
+          Toledo. It was there that I learned the very basics of object oriented
+          proramming, computer security, and several programming languages{'('}
+          Java, c++, MASM{')'}. The degree program is also setup so that I was
+          able to gain real world experience through co-ops. So while I was
+          working on coursework, I was also working at The Ridge Tool Company.
+        </p>
+
+        <p>
           I started out with a strong interest in JavaScript. After watching
           many hours of pluralsight videos I learned most of the quirks of
           JavaScript and how to develop in a clean maintainable way. At the time

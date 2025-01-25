@@ -8,3 +8,11 @@
       0 0 4px 6px #60cdff;
   }
 }
+
+@mixin unstyled-list {
+  padding-left: 0;
+
+  li {
+    list-style: none;
+  }
+}
