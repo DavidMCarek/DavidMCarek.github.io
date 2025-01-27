@@ -1,4 +1,4 @@
-import { Skillset, Skill } from '@/types/resume';
+import { Skillset } from '@/types/resume';
 
 import styles from './skillGroup.module.scss';
 

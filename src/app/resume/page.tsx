@@ -223,7 +223,7 @@ const Resume: React.FC = () => {
         )}
         <h2 className={styles.section}>Experience</h2>
         {resumeData.experience.map((experience) => (
-          <Experience experience={experience} />
+          <Experience key={experience.startDate} experience={experience} />
         ))}
         <h2 className={styles.section}>Education</h2>
         <Education education={resumeData.education} />
