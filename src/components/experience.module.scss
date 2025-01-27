@@ -1,0 +1,12 @@
+@use '../app/mixins';
+
+.experienceHeading {
+  margin-top: 0.5rem;
+}
+
+.experienceBullets {
+  padding-left: 16px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+}

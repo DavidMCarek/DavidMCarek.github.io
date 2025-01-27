@@ -2,7 +2,7 @@
 @use 'mixins';
 
 .main {
-  max-width: vars.$container-width;
+  max-width: vars.$width-desktop;
   margin: 0 auto;
 }
 

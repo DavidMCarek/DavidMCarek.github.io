@@ -1,8 +1,7 @@
 @use '../variables' as vars;
-@use '../mixins';
 
 .main {
-  max-width: vars.$container-width;
+  max-width: vars.$width-desktop;
   margin: 0 auto;
 }
 
@@ -12,12 +11,4 @@
 
 .section {
   margin-top: 1rem;
-}
-
-.skills {
-  display: inline-flex;
-  flex-direction: column;
-  gap: 2px;
-
-  @include mixins.unstyled-list;
 }

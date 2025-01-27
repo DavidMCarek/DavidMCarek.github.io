@@ -1,6 +1,10 @@
-import { Resume as IResume, Skill, SkillGroup, Tag } from '@/types/resume';
+import { Resume as IResume, Tag } from '@/types/resume';
 import styles from './page.module.scss';
 import Card from '@/components/card';
+import React from 'react';
+import Education from '@/components/education';
+import SkillGroup from '@/components/skillGroup';
+import Experience from '@/components/experience';
 
 const Resume: React.FC = () => {
   const resumeData: IResume = {
@@ -8,7 +12,7 @@ const Resume: React.FC = () => {
     navigating diverse web based technologies across the full tech stack \
     with a focus on delivering impactful solutions at every stage of \
     development.`,
-    allSkills: [
+    skillsets: [
       {
         title: 'Languages',
         skills: [
@@ -108,9 +112,6 @@ const Resume: React.FC = () => {
         title: 'Content Management Systems',
         skills: [{ name: 'Drupal' }],
       },
-      {
-        name: 'Elasticsearch',
-      },
     ],
     experience: [
       {
@@ -118,7 +119,33 @@ const Resume: React.FC = () => {
         company: 'Ad Hoc LLC',
         startDate: 'Jan 2023',
         location: 'Remote',
-        bullets: [],
+        bullets: [
+          {
+            text: "Improved Healthcare.gov's article engagement by 5% through intuitive frontend designs.",
+            tags: [Tag.Frontend],
+          },
+          {
+            text: 'Delivered highly accessible applications using WCAG standards and accessibility tools.',
+            tags: [Tag.Frontend, Tag.Accessibility],
+          },
+          {
+            text: 'Enhanced deployment processes, reducing JavaScript bundle sizes by 80%.',
+            tags: [Tag.Frontend],
+          },
+          {
+            text: 'Successfully onboarded 6 engineers, providing comprehensive training and mentorship to accelerate their productivity and integration to the team.',
+            tags: [Tag.Leadership],
+          },
+          {
+            text: 'Designed and authored technical solution for scalable site navigation on Healthcare.gov, aligning with new information architecture and stakeholder goals.',
+            tags: [Tag.FullStack, Tag.Leadership],
+          },
+          {
+            text: 'Improved deployment reliability by reorganizing Akamai NetStorage structure to empower independent teams.',
+            tags: [Tag.Leadership],
+          },
+        ],
+        tags: [Tag.Recent],
       },
       {
         title: 'Software Engineer 3',
@@ -126,22 +153,45 @@ const Resume: React.FC = () => {
         startDate: 'Jun 2021',
         endDate: 'Jan 2023',
         location: 'Remote',
-        bullets: [],
+        bullets: [
+          {
+            text: 'Worked on the Learn team designing and implementing a new content authoring experience for the static content of Healthcare.gov, improving content author delivery times by 50%, leveraging Gatsby, React, TypeScript, SCSS, HTML, GraphQL, NodeJS, Drupal CMS, PHP, JavaScript, MySQL and Docker.',
+            tags: [Tag.FullStack, Tag.CMS],
+          },
+          {
+            text: 'Led the development of a React-based content rules engine, reducing content author dependency on engineering resources by 70%.',
+            tags: [Tag.Frontend],
+          },
+          {
+            text: 'Optimized JavaScript bundle sizes by 80%, cutting load times and improving performance',
+            tags: [Tag.Frontend],
+          },
+          {
+            text: 'Collaborated with UX/UI teams to create pixel-perfect, responsive components.',
+            tags: [],
+          },
+          {
+            text: 'Developed AWS-based content preview systems, reducing editing cycles by 9 minutes.',
+            tags: [],
+          },
+        ],
+        tags: [Tag.Recent],
       },
       {
         title: 'Software Engineer',
         company: 'Ridge Tool Company',
         startDate: 'Jun 2018',
         endDate: 'Jan 2021',
-        location: 'Remote',
+        location: 'Elyria, OH',
         bullets: [],
+        tags: [Tag.Recent],
       },
       {
         title: 'Developer 1',
         company: 'Hyland Software',
         startDate: 'Jan 2018',
         endDate: 'Jun 2018',
-        location: 'Remote',
+        location: 'Westlake, OH',
         bullets: [],
       },
       {
@@ -149,11 +199,16 @@ const Resume: React.FC = () => {
         company: 'Ridge Tool Company',
         startDate: 'Jan 2015',
         endDate: 'Dec 2017',
-        location: 'Remote',
+        location: 'Elyria, OH',
         bullets: [],
       },
     ],
-    education: '',
+    education: {
+      degreeType: 'Bachelor of Science',
+      major: 'Computer Science and Engineering',
+      honors: 'Summa Cum Laude',
+      school: 'The University of Toledo',
+    },
   };
 
   return (
@@ -163,25 +218,15 @@ const Resume: React.FC = () => {
         <h2 className={styles.section}>Summary</h2>
         <p>{resumeData.summary}</p>
         <h2 className={styles.section}>Skills</h2>
-        {resumeData.allSkills.length > 0 && (
-          <ul className={styles.skills}>
-            {resumeData.allSkills.map((skill) => {
-              if (Object.hasOwn(skill, 'title')) {
-                const skillCategory = (skill as SkillGroup).title;
-                const skills = (skill as SkillGroup).skills
-                  .map((skill) => skill.name)
-                  .join(', ');
-                return (
-                  <li key={skillCategory}>{`${skillCategory}: ${skills}`}</li>
-                );
-              } else
-                return (
-                  <li key={(skill as Skill).name}>{(skill as Skill).name}</li>
-                );
-            })}
-          </ul>
+        {resumeData.skillsets.length > 0 && (
+          <SkillGroup skillsets={resumeData.skillsets} />
         )}
         <h2 className={styles.section}>Experience</h2>
+        {resumeData.experience.map((experience) => (
+          <Experience experience={experience} />
+        ))}
+        <h2 className={styles.section}>Education</h2>
+        <Education education={resumeData.education} />
       </Card>
     </main>
   );

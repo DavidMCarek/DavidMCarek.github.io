@@ -12,6 +12,7 @@ export enum Tag {
   Cloud = 'Cloud Technologies',
   CMS = 'Content Management Systems',
   Security = 'Security',
+  Recent = 'Recent',
 }
 
 export interface ResumeBullet {
@@ -27,6 +28,7 @@ export interface Experience {
   endDate?: string;
   location: string;
   bullets: Array<ResumeBullet>;
+  tags?: Array<Tag>;
 }
 
 export interface Skill {
@@ -34,15 +36,22 @@ export interface Skill {
   tags?: Array<Tag>;
 }
 
-export interface SkillGroup {
+export interface Skillset {
   title: string;
   skills: Array<Skill>;
   tags?: Array<Tag>;
 }
 
+export interface Education {
+  degreeType: string;
+  major: string;
+  honors: string;
+  school: string;
+}
+
 export interface Resume {
   summary: string;
-  allSkills: Array<SkillGroup | Skill>;
+  skillsets: Array<Skillset>;
   experience: Array<Experience>;
-  education: string;
+  education: Education;
 }

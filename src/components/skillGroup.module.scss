@@ -1,0 +1,13 @@
+@use '../app/mixins';
+
+.skills {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+
+  @include mixins.unstyled-list;
+}
+
+.groupTitle {
+  font-weight: bold;
+}
