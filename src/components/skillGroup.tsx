@@ -8,7 +8,7 @@ type Props = {
 
 const SkillGroup: React.FC<Props> = ({ skillsets }) => {
   const skillGroupToString = ({ skills }: Skillset) => {
-    return skills.map((skill) => skill.name).join(', ');
+    return skills.join(', ');
   };
 
   return (
