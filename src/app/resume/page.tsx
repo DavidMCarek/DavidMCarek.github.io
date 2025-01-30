@@ -1,22 +1,10 @@
-'use client';
-
-import { Resume as IResume, Tag } from '@/types/resume';
+import { Resume as IResume } from '@/types/resume';
 import styles from './page.module.scss';
 import Card from '@/components/card';
-import React, { useState } from 'react';
+import React from 'react';
 import Education from '@/components/education';
 import SkillGroup from '@/components/skillGroup';
 import Experience from '@/components/experience';
-
-type TagFilter = {
-  tag: Tag;
-  enabled: boolean;
-};
-
-type Filters = {
-  onlyRecent: boolean;
-  tags: Array<TagFilter>;
-};
 
 const Resume: React.FC = () => {
   const resumeData: IResume = {
