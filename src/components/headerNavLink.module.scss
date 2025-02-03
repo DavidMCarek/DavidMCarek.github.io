@@ -2,6 +2,8 @@
 
 .navLink {
   padding: 1rem 1.5rem;
+  color: white;
+  text-decoration: none;
 
   @include mixins.focus-styles;
 }

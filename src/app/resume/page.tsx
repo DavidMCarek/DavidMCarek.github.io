@@ -136,7 +136,7 @@ const Resume: React.FC = () => {
 
   return (
     <main className={styles.main}>
-      <Card className={styles.cardPrint}>
+      <Card as="section" className={styles.cardPrint}>
         <h1 className={styles.name}>David Carek</h1>
         <h2 className={styles.section}>Summary</h2>
         <p>{resumeData.summary}</p>

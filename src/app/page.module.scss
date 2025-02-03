@@ -6,30 +6,39 @@
   margin: 0 auto;
 }
 
-.avatarContainer {
-  display: flex;
-  margin-top: 2rem;
-}
-
 .avatar {
+  display: block;
   border-radius: 100%;
-  margin: 0 auto;
+  margin: 2rem auto 0 auto;
   padding: 8px;
   background-color: #000000;
 }
 
-.titlebar {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.content {
+  padding-top: 1.25rem !important;
+  display: grid;
+  grid-template-areas:
+    'title linkedin github'
+    'summary summary summary';
+  grid-template-columns: 1fr auto auto;
+  gap: 0.5rem;
 }
 
 .title {
-  justify-content: center;
-  margin-right: auto;
+  align-self: center;
+  grid-area: title;
 }
 
-.linkedin .github {
+.linkedin {
+  grid-area: linkedin;
+  padding: 8px;
+  display: flex;
+
+  @include mixins.focus-styles;
+}
+
+.github {
+  grid-area: github;
   padding: 8px;
   display: flex;
 
@@ -38,5 +47,5 @@
 
 .summary {
   font-size: 1.2rem;
-  margin-top: 0.5rem;
+  grid-area: summary;
 }

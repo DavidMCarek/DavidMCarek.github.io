@@ -1,13 +1,24 @@
+import { ElementType, ReactNode } from 'react';
 import styles from './card.module.scss';
 
 type Props = {
-  children: React.ReactNode;
+  as?: ElementType;
+  children: ReactNode;
   className?: string;
 };
 
-const Card: React.FC<Props> = ({ children, className }) => {
+const Card: React.FC<Props> = ({
+  as: Component = 'div',
+  children,
+  className,
+  ...props
+}) => {
   const classes = className ? `${styles.card} ${className}` : styles.card;
-  return <div className={classes}>{children}</div>;
+  return (
+    <Component className={classes} {...props}>
+      {children}
+    </Component>
+  );
 };
 
 export default Card;

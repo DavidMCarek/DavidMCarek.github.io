@@ -6,6 +6,8 @@
     box-shadow:
       0 0 0 3px #60cdff,
       0 0 4px 6px #60cdff;
+    position: relative;
+    z-index: 1000;
   }
 }
 
