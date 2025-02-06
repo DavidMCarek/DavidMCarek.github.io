@@ -122,7 +122,7 @@ export default function MyQualmsWithDesignSystems() {
   `;
 
   return (
-    <BlogPost title="Common pitfalls of design systems" date="Feb 5, 2025">
+    <BlogPost title="Common pitfalls of design systems" date="Feb 6, 2025">
       <p>
         I would like to start into this saying that design systems can be
         incredibly helpful. Many can have standardized implementations of

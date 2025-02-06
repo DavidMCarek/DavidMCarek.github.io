@@ -6,7 +6,7 @@ export default function Blog() {
     {
       url: '/blog/design-system-pitfalls',
       title: 'Design system pitfalls',
-      date: 'Feb 4, 2025',
+      date: 'Feb 6, 2025',
       description:
         "Let's walk through some common patterns of design systems that developers abuse.",
     },
