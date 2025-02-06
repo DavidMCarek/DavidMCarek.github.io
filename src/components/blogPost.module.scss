@@ -21,7 +21,7 @@
     margin: 0.5rem 0 1rem 0;
   }
 
-  @include mixins.card;
+  box-shadow: none;
 
   @media (min-width: vars.$width-tablet) {
     @include mixins.card;
