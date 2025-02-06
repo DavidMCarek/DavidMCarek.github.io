@@ -27,9 +27,14 @@ body {
 }
 
 code {
-  white-space: pre-wrap;
+  white-space: pre;
   color: black;
   background-color: #dedede;
+  overflow-x: auto;
+
+  &.u-display-block {
+    padding: 1rem;
+  }
 }
 
 .u-display-block {

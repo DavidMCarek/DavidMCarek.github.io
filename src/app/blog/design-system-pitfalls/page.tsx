@@ -2,123 +2,123 @@ import BlogPost from '@/components/blogPost';
 
 export default function MyQualmsWithDesignSystems() {
   const dsGridExample = `
-  <main class="container">
-    <div class="row">
-      <div class="col-6 col-a">
-        <p>First column content</p>
-      </div>
-      <div class="col-6 col-b">
-        <p>Second column content</p>
-      </div>
+<main class="container">
+  <div class="row">
+    <div class="col-6 col-a">
+      <p>First column content</p>
     </div>
-    <div class="row">
-      <div class="col-12 col-c">
-        <p>Second row content</p>
-      </div>
+    <div class="col-6 col-b">
+      <p>Second column content</p>
     </div>
-  </main>
+  </div>
+  <div class="row">
+    <div class="col-12 col-c">
+      <p>Second row content</p>
+    </div>
+  </div>
+</main>
 
-  <style>
-    .container {
-      padding: 0 16px;
-    }
+<style>
+  .container {
+    padding: 0 16px;
+  }
 
-    .row {
-      margin: 0 -16px;
-      display: flex;
-    }
+  .row {
+    margin: 0 -16px;
+    display: flex;
+  }
 
-    .col-6 {
-      flex: 0 0 50%;
-      max-width: 50%;
-      padding 16px;
-    }
+  .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding 16px;
+  }
 
-    .col-12 {
-      flex: 0 0 100%;
-      max-width: 100%;
-      padding 16px;
-    }
+  .col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding 16px;
+  }
 
-    .col-a {
-      background-color:rgba(1, 217, 255, 0.21);
-    }
+  .col-a {
+    background-color:rgba(1, 217, 255, 0.21);
+  }
 
-    .col-b {
-      background-color:rgba(255, 1, 1, 0.21);
-    }
+  .col-b {
+    background-color:rgba(255, 1, 1, 0.21);
+  }
 
-    .col-c {
-      background-color:rgba(86, 255, 1, 0.21);
-    }
-  </style>
+  .col-c {
+    background-color:rgba(86, 255, 1, 0.21);
+  }
+</style>
   `;
 
   const cssGridExample = `
-  <main class="container">
-    <p class="col-a">First column content</p>
-    <p class="col-b">Second column content</p>
-    <p class="col-c">Second row content</p>
-  </main>
+<main class="container">
+  <p class="col-a">First column content</p>
+  <p class="col-b">Second column content</p>
+  <p class="col-c">Second row content</p>
+</main>
 
-  <style>
-    .container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: 
-        "a b"
-        "c c";
-    }
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "a b"
+      "c c";
+  }
 
-    .col-a {
-      grid-area: a;
-      background-color:rgba(1, 217, 255, 0.21);
-    }
+  .col-a {
+    grid-area: a;
+    background-color:rgba(1, 217, 255, 0.21);
+  }
 
-    .col-b {
-      grid-area: b;
-      background-color:rgba(255, 1, 1, 0.21);
-    }
+  .col-b {
+    grid-area: b;
+    background-color:rgba(255, 1, 1, 0.21);
+  }
 
-    .col-c {
-      grid-area: c;
-      background-color:rgba(86, 255, 1, 0.21);
-    }
+  .col-c {
+    grid-area: c;
+    background-color:rgba(86, 255, 1, 0.21);
+  }
 
-    .col-a,
-    .col-b,
-    .col-c {
-      padding: 16px 0;
-    }
+  .col-a,
+  .col-b,
+  .col-c {
+    padding: 16px 0;
+  }
 
-    p {
-      margin: 0 !important;
-    }
-  </style
+  p {
+    margin: 0 !important;
+  }
+</style
   `;
 
   const badSeparationExample = `
-    <button class="flex w-full justify-center rounded-md bg-indigo-600
-      px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500
-      focus-visible:outline-2 focus-visible:outline-offset-2
-      focus-visible:outline-indigo-600">
-      Text
-    </button>
+<button class="flex w-full justify-center rounded-md bg-indigo-600
+  px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500
+  focus-visible:outline-2 focus-visible:outline-offset-2
+  focus-visible:outline-indigo-600">
+  Text
+</button>
   `;
 
   const goodSeparationExample = `
-    // HTML
-    <button class="loginButton hover:bg-indigo-500
-      focus-visible:outline-2 focus-visible:outline-offset-2
-      focus-visible:outline-indigo-600">
-      Text
-    </button>
+// HTML
+<button class="loginButton hover:bg-indigo-500
+  focus-visible:outline-2 focus-visible:outline-offset-2
+  focus-visible:outline-indigo-600">
+  Text
+</button>
 
-    // CSS module
-    .loginButton {
-      @apply flex w-full justify-center rounded-md bg-indigo-600
-        px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs;
-    }
+// CSS module
+.loginButton {
+  @apply flex w-full justify-center rounded-md bg-indigo-600
+    px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs;
+}
   `;
 
   return (
