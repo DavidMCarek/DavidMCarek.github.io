@@ -1,0 +1,10 @@
+@use '../app/variables' as vars;
+
+.post {
+  border-bottom: 1px solid vars.$border-color;
+  padding: 1rem;
+}
+
+.date {
+  font-weight: bold;
+}

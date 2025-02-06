@@ -3,20 +3,35 @@
 html,
 body {
   max-width: 100vw;
+  min-height: 100vh;
   overflow-x: hidden;
   font-size: 16px;
 }
 
 body {
   color: #171717;
-  background: vars.$background-color;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+
+  @media (min-width: vars.$width-tablet) {
+    background: vars.$background-color;
+  }
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+code {
+  white-space: pre-wrap;
+  color: black;
+  background-color: #dedede;
+}
+
+.u-display-block {
+  display: block !important;
 }

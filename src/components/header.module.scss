@@ -4,6 +4,11 @@
   background-color: #1b4b31;
   color: #ffffff;
   font-weight: bold;
+  padding: 8px;
+
+  @media (min-width: vars.$width-tablet) {
+    padding: 8px 2rem;
+  }
 
   @media print {
     display: none;
@@ -12,7 +17,7 @@
 
 .nav {
   display: flex;
-  max-width: vars.$width-desktop;
+  max-width: calc(vars.$width-desktop - 2rem);
   margin: 0 auto;
-  padding: 0 1rem;
+  gap: 8px;
 }

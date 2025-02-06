@@ -1,0 +1,24 @@
+@use '../variables' as vars;
+@use '../mixins';
+
+.main {
+  max-width: vars.$width-desktop;
+  margin: 2rem;
+
+  @media (min-width: vars.$width-tablet) {
+    @include mixins.card;
+  }
+
+  @media (min-width: calc(vars.$width-desktop + 4rem)) {
+    margin: 2rem auto;
+  }
+}
+
+.title {
+  border-bottom: 1px solid vars.$border-color;
+  padding-bottom: 0.5rem;
+}
+
+.blogList {
+  @include mixins.unstyled-list;
+}

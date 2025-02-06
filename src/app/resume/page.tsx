@@ -1,6 +1,5 @@
 import { Resume as IResume } from '@/types/resume';
 import styles from './page.module.scss';
-import Card from '@/components/card';
 import React from 'react';
 import Education from '@/components/education';
 import SkillGroup from '@/components/skillGroup';
@@ -136,21 +135,19 @@ const Resume: React.FC = () => {
 
   return (
     <main className={styles.main}>
-      <Card as="section" className={styles.cardPrint}>
-        <h1 className={styles.name}>David Carek</h1>
-        <h2 className={styles.section}>Summary</h2>
-        <p>{resumeData.summary}</p>
-        <h2 className={styles.section}>Skills</h2>
-        {resumeData.skillsets.length > 0 && (
-          <SkillGroup skillsets={resumeData.skillsets} />
-        )}
-        <h2 className={styles.section}>Experience</h2>
-        {resumeData.experience.map((experience) => (
-          <Experience key={experience.startDate} experience={experience} />
-        ))}
-        <h2 className={styles.section}>Education</h2>
-        <Education education={resumeData.education} />
-      </Card>
+      <h1 className={styles.name}>David Carek</h1>
+      <h2 className={styles.section}>Summary</h2>
+      <p>{resumeData.summary}</p>
+      <h2 className={styles.section}>Skills</h2>
+      {resumeData.skillsets.length > 0 && (
+        <SkillGroup skillsets={resumeData.skillsets} />
+      )}
+      <h2 className={styles.section}>Experience</h2>
+      {resumeData.experience.map((experience) => (
+        <Experience key={experience.startDate} experience={experience} />
+      ))}
+      <h2 className={styles.section}>Education</h2>
+      <Education education={resumeData.education} />
     </main>
   );
 };

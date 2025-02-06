@@ -1,3 +1,5 @@
+@use './variables' as vars;
+
 @mixin focus-styles {
   &:focus,
   &:active {
@@ -16,5 +18,23 @@
 
   li {
     list-style: none;
+  }
+}
+
+@mixin card {
+  background-color: rgb(255, 255, 255);
+  color: #1a1a1a;
+  border-radius: 4px;
+  padding: 2rem;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+  @media (min-width: vars.$width-tablet) {
+    padding: 2.5rem;
+  }
+
+  @media (min-width: vars.$width-desktop) {
+    padding: 3rem;
   }
 }
