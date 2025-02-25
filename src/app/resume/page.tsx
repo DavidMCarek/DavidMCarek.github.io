@@ -114,8 +114,8 @@ const Resume: React.FC = () => {
       {
         title: 'Software Engineer',
         company: 'Ridge Tool Company',
-        startDate: 'Jun 2018',
-        endDate: 'Jan 2021',
+        startDate: 'Jan 2018',
+        endDate: 'Jun 2021',
         location: 'Elyria, OH',
         bullets: [
           'Crafted a .NET Core API and corresponding Vue user interface for distributor discount management and validation, enhancing sales workflow efficiency.',
