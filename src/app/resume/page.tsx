@@ -114,7 +114,7 @@ const Resume: React.FC = () => {
       {
         title: 'Software Engineer',
         company: 'Ridge Tool Company',
-        startDate: 'Jan 2018',
+        startDate: 'Jun 2018',
         endDate: 'Jun 2021',
         location: 'Elyria, OH',
         bullets: [
