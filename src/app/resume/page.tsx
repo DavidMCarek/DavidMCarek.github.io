@@ -105,10 +105,10 @@ const Resume: React.FC = () => {
         bullets: [
           'Designed and implemented a new content authoring experience for Healthcare.gov, improving content author delivery rates by 50%, leveraging a decoupled Drupal and Gatsby architecture.',
           'Developed the React-based content rules engine, reducing content author dependency on engineering resources by 70%.',
-          'Optimized JavaScript bundle sizes by 80% through tree shaking, cutting load times and improving performance',
+          'Optimized JavaScript bundle sizes by 80% through tree shaking, cutting load times and improving performance.',
           'Collaborated with UX/UI teams to create pixel-perfect, responsive components.',
           'Developed AWS-based content preview systems, reducing editing cycles by 9 minutes.',
-          'Reduced deployment times from 25 minutes to 10 minutes through optimized image handling practices and new cloud syncing technologies',
+          'Reduced deployment times from 25 minutes to 10 minutes through optimized image handling practices and new cloud syncing technologies.',
         ],
       },
       {
