@@ -1,13 +1,13 @@
 import { Experience as IExperience } from '@/types/resume';
-import React from 'react';
+import { ReactElement } from 'react';
 
 import styles from './experience.module.scss';
 
-type Props = {
+type Props = Readonly<{
   experience: IExperience;
-};
+}>;
 
-const Experience: React.FC<Props> = ({ experience }) => {
+export default function Experience({ experience }: Props): ReactElement {
   const experienceToHeadingStr = ({
     title,
     company,
@@ -33,6 +33,4 @@ const Experience: React.FC<Props> = ({ experience }) => {
       </ul>
     </div>
   );
-};
-
-export default Experience;
+}

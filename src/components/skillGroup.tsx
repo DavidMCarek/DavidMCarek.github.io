@@ -1,12 +1,13 @@
 import { Skillset } from '@/types/resume';
 
+import { ReactElement } from 'react';
 import styles from './skillGroup.module.scss';
 
-type Props = {
+type Props = Readonly<{
   skillsets: Array<Skillset>;
-};
+}>;
 
-const SkillGroup: React.FC<Props> = ({ skillsets }) => {
+export default function SkillGroup({ skillsets }: Props): ReactElement {
   const skillGroupToString = ({ skills }: Skillset) => {
     return skills.join(', ');
   };
@@ -21,6 +22,4 @@ const SkillGroup: React.FC<Props> = ({ skillsets }) => {
       ))}
     </ul>
   );
-};
-
-export default SkillGroup;
+}

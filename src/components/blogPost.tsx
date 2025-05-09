@@ -1,12 +1,17 @@
+import { ReactElement } from 'react';
 import styles from './blogPost.module.scss';
 
-type Props = {
+type Props = Readonly<{
   title: string;
   date: string;
   children: React.ReactNode;
-};
+}>;
 
-const BlogPost: React.FC<Props> = ({ title, date, children }) => {
+export default function BlogPost({
+  title,
+  date,
+  children,
+}: Props): ReactElement {
   return (
     <main className={styles.main}>
       <article>
@@ -16,6 +21,4 @@ const BlogPost: React.FC<Props> = ({ title, date, children }) => {
       </article>
     </main>
   );
-};
-
-export default BlogPost;
+}

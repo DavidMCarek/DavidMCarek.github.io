@@ -1,6 +1,7 @@
 import BlogPost from '@/components/blogPost';
+import { ReactElement } from 'react';
 
-export default function MyQualmsWithDesignSystems() {
+export default function MyQualmsWithDesignSystems(): ReactElement {
   const dsGridExample = `
 <main class="container">
   <div class="row">

@@ -1,11 +1,11 @@
-import { Resume as IResume } from '@/types/resume';
-import styles from './page.module.scss';
-import React from 'react';
 import Education from '@/components/education';
-import SkillGroup from '@/components/skillGroup';
 import Experience from '@/components/experience';
+import SkillGroup from '@/components/skillGroup';
+import { Resume as IResume } from '@/types/resume';
+import { ReactElement } from 'react';
+import styles from './page.module.scss';
 
-const Resume: React.FC = () => {
+export default function Resume(): ReactElement {
   const resumeData: IResume = {
     summary: `Seasoned software engineer with over a decade of experience \
     navigating diverse web based technologies across the full tech stack \
@@ -150,6 +150,4 @@ const Resume: React.FC = () => {
       <Education education={resumeData.education} />
     </main>
   );
-};
-
-export default Resume;
+}

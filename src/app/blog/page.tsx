@@ -1,7 +1,8 @@
-import styles from './page.module.scss';
 import BlogPostListItem from '@/components/blogPostListItem';
+import { ReactElement } from 'react';
+import styles from './page.module.scss';
 
-export default function Blog() {
+export default function Blog(): ReactElement {
   const posts = [
     {
       url: '/blog/design-system-pitfalls',

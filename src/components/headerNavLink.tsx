@@ -3,14 +3,18 @@
 import classNames from 'classnames';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { ReactElement } from 'react';
 import styles from './headerNavLink.module.scss';
 
-type Props = {
+type Props = Readonly<{
   route: string;
   children: string;
-};
+}>;
 
-const HeaderNavLink: React.FC<Props> = ({ route, children }) => {
+export default function HeaderNavLink({
+  route,
+  children,
+}: Props): ReactElement {
   const pathname = usePathname();
 
   return (
@@ -24,6 +28,4 @@ const HeaderNavLink: React.FC<Props> = ({ route, children }) => {
       {children}
     </Link>
   );
-};
-
-export default HeaderNavLink;
+}

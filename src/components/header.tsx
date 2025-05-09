@@ -1,9 +1,9 @@
-import React from 'react';
 import { ROUTES } from '@/constants/routes';
-import HeaderNavLink from './headerNavLink';
+import { ReactElement } from 'react';
 import styles from './header.module.scss';
+import HeaderNavLink from './headerNavLink';
 
-const Header: React.FC = () => {
+export default function Header(): ReactElement {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
@@ -13,6 +13,4 @@ const Header: React.FC = () => {
       </nav>
     </header>
   );
-};
-
-export default Header;
+}

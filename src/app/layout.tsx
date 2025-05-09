@@ -1,7 +1,8 @@
+import Header from '@/components/header';
 import type { Metadata } from 'next';
 import { Nunito_Sans } from 'next/font/google';
+import { ReactElement } from 'react';
 import './globals.scss';
-import Header from '@/components/header';
 
 export const metadata: Metadata = {
   title: 'David Carek',
@@ -10,11 +11,11 @@ export const metadata: Metadata = {
 
 const nunito = Nunito_Sans({ subsets: ['latin'] });
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+type Props = Readonly<{
   children: React.ReactNode;
-}>) {
+}>;
+
+export default function RootLayout({ children }: Props): ReactElement {
   return (
     <html lang="en">
       <body className={nunito.className}>

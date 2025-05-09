@@ -1,12 +1,13 @@
 import { Education as IEducation } from '@/types/resume';
 
+import { ReactElement } from 'react';
 import styles from './education.module.scss';
 
-type Props = {
+type Props = Readonly<{
   education: IEducation;
-};
+}>;
 
-const Education: React.FC<Props> = ({ education }) => {
+export default function Education({ education }: Props): ReactElement {
   return (
     <p>
       <span className={styles.degreeType}>{education.degreeType}:</span>{' '}
@@ -17,6 +18,4 @@ const Education: React.FC<Props> = ({ education }) => {
       {education.school}
     </p>
   );
-};
-
-export default Education;
+}

@@ -1,20 +1,21 @@
 import Link from 'next/link';
 
+import { ReactElement } from 'react';
 import styles from './blogPostListItem.module.scss';
 
-type Props = {
+type Props = Readonly<{
   url: string;
   title: string;
   date: string;
   description: string;
-};
+}>;
 
-const BlogPostListItem: React.FC<Props> = ({
+export default function BlogPostListItem({
   url,
   title,
   date,
   description,
-}) => {
+}: Props): ReactElement {
   return (
     <li className={styles.post}>
       <h2 className={styles.title}>
@@ -24,6 +25,4 @@ const BlogPostListItem: React.FC<Props> = ({
       <p>{description}</p>
     </li>
   );
-};
-
-export default BlogPostListItem;
+}
