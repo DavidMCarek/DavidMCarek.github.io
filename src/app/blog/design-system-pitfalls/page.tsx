@@ -123,7 +123,11 @@ export default function MyQualmsWithDesignSystems(): ReactElement {
   `;
 
   return (
-    <BlogPost title="Common pitfalls of design systems" date="Feb 6, 2025">
+    <BlogPost
+      title="Common pitfalls of design systems"
+      publishDate="Feb 6, 2025"
+      updateDate="May 9, 2025"
+    >
       <p>
         I would like to start into this saying that design systems can be
         incredibly helpful. Many can have standardized implementations of
@@ -201,6 +205,45 @@ export default function MyQualmsWithDesignSystems(): ReactElement {
         I do encourage just writing the CSS for the simple state variants where
         possible and just leveraging variables to handle colors to keep both the
         markup and styles clean and easy to read.
+      </p>
+      <h2>Ownership</h2>
+      <p>
+        Many developers like to over leverage design systems in the name of not
+        directly owning the styles associated with the codebase. For example, if
+        the design system decides to update styling for an accordion class then
+        all the accordions across the site get updated. This is the ideal use
+        case for a design system because many styles are being applied in the
+        format of a single component.
+      </p>
+      <p>
+        So when does overleveraging begin? When simple utility classes in charge
+        of one single style get applied in bulk to many elements inside a given
+        component. The design system will never need to update the styles for a
+        utility class like <code>u-display-flex</code> that applies{' '}
+        <code>display: flex;</code> to an element. Therefore, claims of
+        ownership don{"'"}t really apply since a class whose value never changes
+        has no benefit over the actual style behind it.
+      </p>
+      <p>
+        Additionally, there are often things across your site that you wouldn
+        {"'"}t want the design system to have ownership over. Many developers
+        praise the grid systems that are provided in design systems but if we
+        think the design system could change how that grid system functions or
+        styling behind it what sort of issues would crop up? Let{"'"}s say the
+        design system adjusts the default spacer for the grid from 8px to 16px.
+        For many sites that sort of change would drastically change the layout
+        of all the pages on the site. So when using a design system we need to
+        ask ourselves if the styles being provided are worth the risk of them
+        changing, once again proving that ownership is a double edged sword.
+      </p>
+      <p>
+        In those small situations where you only need one or two classes to
+        achieve the styling for an element it{"'"}s perfectly reasonable to use
+        utility classes. A little nuance goes a long way when it comes to using
+        utility classes in a clear and concise manner. Other times when utility
+        classes make sense to use is when the styling starts to get more complex
+        than a one liner of CSS. Think styles with breakpoints as a decent
+        example of this.
       </p>
       <h2>Summary</h2>
       <p>
